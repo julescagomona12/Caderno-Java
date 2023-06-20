@@ -1,52 +1,33 @@
-fun main(args: Array<String>) {
-  // 1 - Faça um programa em kotlin que solicite dois números inteiros do usuário, o programa faz a soma desses números e exibe a resposta
+//importar a biblioteca matematica para fazer raiz
+import kotlin.math.*
+//criar a função principal main
+fun main(){
+  //pedir para usuario digitar os numeros
+  println("Calculo das raizes de uma equação do segundo grau")
+  println("ax²+bx+c=0")
+  println("Digite o valor de a: ")
+  var num1=readLine()!!
+  println("Digite o valor de b: ")
+  var num2=readLine()!!
+  println("Digite o valor de c: ")
+  var num3=readLine()!!
+  println("Você digitou a:"+num1+",b:"+num2+",c:"+num3)
+  //os numeros digitados são do tipo String,transformar em Double
+  var a=num1.toDouble()
+  var b=num2.toDouble()
+  var c=num3.toDouble()
 
-  println("Qual seu nome?")
-  var texto = readLine()!!
-  println("Seja Bem Vindo " + texto)
+  println("numeros do tipo Double-> a:"+a+",b:"+b+",c:"+c)
+  //calculo de delta
+  var delta=b*b-(4*a*c)
+  println("O delta é:"+delta)
+  var raizdelta=sqrt(delta)
+  println("A raiz de delta é:"+raizdelta)
+  //calculo x1
+  var x1 = (-b + raizdelta) / (2 * a)
+  println("x1: " + x1)
+ //calculo x2
+  var x2 = (-b - raizdelta) / (2 * a)
+  println("x2: " + x2)
   
-  println("Digite um número: ")
-  var num1 = readLine()!!
-    var x = num1.toInt()
-  println("O número é: " +num1)
-  println("Digite outro número: ")
-  var num2 = readLine()!!
-  var y = num2.toInt()
-  println("O número é: " +num2)
-  var soma = x+y
-  println("O resultado é: " +soma)
-  //agora inclua as funcionalidades de subtração multiplicação e divisão
-  
-  println("Digite um número: ")
-  var nume1 = readLine()!!
-    var a = nume1.toInt()
-    println("O número é: " +nume1)
-  println("Digite outro número: ")
-  var nume2 = readLine()!!
-  var b = nume2.toInt()
-  println("O número é: " +nume2)
-  var subtração = a-b
-  println("O resultado é: " +subtração)
-
-  println("Digite um número: ")
-  var numer1 = readLine()!!
-    var c = numer1.toInt()
-    println("O número é: " +numer1)
-  println("Digite outro número: ")
-  var numer2 = readLine()!!
-    var d = numer2.toInt()
-  println("O número é: " +numer2)
-  var multiplicação = c*d
-  println("O resultado é: " +multiplicação)
-
-  println("Digite um número: ")
-  var numero1 = readLine()!!
-    var e = numero1.toInt()
-    println("O número é: " +numero1)
-  println("Digite outro número: ")
-  var numero2 = readLine()!!
-  var f = numero2.toInt()
-  println("O número é: " +numero2)
-  var divisão = e/f
-  println("O resultado é: " +divisão)
 }
